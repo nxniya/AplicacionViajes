@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<inset xmlns:android="http://schemas.android.com/apk/res/android"
+    android:insetTop="34dp"
+    android:insetBottom="34dp"
+    android:insetLeft="34dp"
+    android:insetRight="34dp">
+    <bitmap android:src="@drawable/image" android:gravity="fill" android:tint="#FFFFFF"/>
+</inset>

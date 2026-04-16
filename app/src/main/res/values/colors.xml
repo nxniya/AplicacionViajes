@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Muted Teal -->
+    <color name="teal_900">#1A3D3D</color>
+    <color name="teal_800">#2D5F5F</color>
+    <color name="teal_700">#3A7070</color>
+    <color name="teal_500">#4E8585</color>
+    <color name="teal_300">#84B8B8</color>
+    <color name="teal_100">#C4E0E0</color>
+    <color name="teal_50">#EAF4F4</color>
+
+    <!-- Muted Purple -->
+    <color name="purple_900">#2E2350</color>
+    <color name="purple_800">#4A3F70</color>
+    <color name="purple_700">#5C5080</color>
+    <color name="purple_500">#6B5F91</color>
+    <color name="purple_300">#A89EC4</color>
+    <color name="purple_100">#DCCEF8</color>
+    <color name="purple_50">#F0EAFF</color>
+</resources>

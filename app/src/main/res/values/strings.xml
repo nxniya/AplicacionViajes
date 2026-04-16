@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">⟡ Acme Explorer</string>
+    <string name="btn_busqueda">Búsqueda</string>
+    <string name="btn_cambiar_vista">Cambiar Vista (Lista/Grid)</string>
+</resources>
