@@ -2,4 +2,27 @@
     <string name="app_name">⟡ Acme Explorer</string>
     <string name="btn_busqueda">Búsqueda</string>
     <string name="btn_cambiar_vista">Cambiar Vista (Lista/Grid)</string>
+
+    <!-- Auth screen -->
+    <string name="label_sign_in">Iniciar sesión</string>
+    <string name="label_create_account">Crear cuenta</string>
+    <string name="label_sign_in_google">Continuar con Google</string>
+    <string name="label_or">o</string>
+    <string name="label_remember_me">Recordarme</string>
+    <string name="label_sign_out">Cerrar sesión</string>
+    <string name="confirm_sign_out">¿Seguro que quieres cerrar sesión?</string>
+    <string name="hint_email">Correo electrónico</string>
+    <string name="hint_password">Contraseña</string>
+    <string name="hint_confirm_password">Confirmar contraseña</string>
+
+    <!-- Auth errors -->
+    <string name="error_email_required">Introduce tu correo electrónico</string>
+    <string name="error_password_required">Introduce tu contraseña</string>
+    <string name="error_password_too_short">La contraseña debe tener al menos 6 caracteres</string>
+    <string name="error_passwords_no_match">Las contraseñas no coinciden</string>
+    <string name="error_auth_failed">Error de autenticación: %1$s</string>
+    <string name="error_google_sign_in">Error al iniciar sesión con Google: %1$s</string>
+    <string name="error_unexpected_credential">Credencial inesperada recibida</string>
+    <string name="error_email_not_verified">Verifica tu correo antes de iniciar sesión. Revisa tu bandeja de entrada.</string>
+    <string name="info_verification_sent">Cuenta creada. Hemos enviado un correo de verificación — confírmalo antes de iniciar sesión.</string>
 </resources>

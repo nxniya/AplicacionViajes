@@ -1,5 +1,6 @@
 plugins {
     alias(libs.plugins.android.application)
+    alias(libs.plugins.google.services)
 }
 
 android {
@@ -31,6 +32,12 @@ android {
     }
 }
 
+// firebase-auth-common is a defunct artifact merged into firebase-auth in modern versions.
+// Exclude it globally to prevent old transitive deps from requesting a version that no longer exists.
+configurations.all {
+    exclude(group = "com.google.firebase", module = "firebase-auth-common")
+}
+
 dependencies {
     implementation(libs.appcompat)
     implementation("com.github.bumptech.glide:glide:4.14.2")
@@ -39,6 +46,25 @@ dependencies {
     implementation(libs.constraintlayout)
     implementation(libs.androidx.core)
     implementation(libs.espresso.core)
+
+    // Firebase – enforcedPlatform ensures the BOM version wins over any transitive override
+    implementation(enforcedPlatform(libs.firebase.bom))
+    implementation(libs.firebase.auth)
+    implementation(libs.firebase.database)
+    implementation(libs.firebase.firestore)
+
+    // Google Maps & Location
+    implementation(libs.play.services.maps)
+    implementation(libs.play.services.location)
+
+    // Retrofit + Gson
+    implementation(libs.retrofit)
+    implementation(libs.converter.gson)
+
+    // Google Sign-In via Credential Manager
+    implementation(libs.credentials)
+    implementation(libs.credentials.play.services.auth)
+    implementation(libs.googleid)
 
     // Dependencies for unit tests (including those using Espresso in src/test)
     testImplementation(libs.junit)

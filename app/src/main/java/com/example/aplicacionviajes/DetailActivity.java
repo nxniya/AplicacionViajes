@@ -39,6 +39,7 @@ public class DetailActivity extends AppCompatActivity {
         TextView fecha = findViewById(R.id.detailFecha);
         CheckBox checkFavorite = findViewById(R.id.checkFavorite);
         Button btnBuy = findViewById(R.id.btnBuy);
+        Button btnMap = findViewById(R.id.btnMap);
 
         if (trip != null) {
             title.setText(trip.getTitulo());
@@ -66,14 +67,17 @@ public class DetailActivity extends AppCompatActivity {
                 String message = "¡Que tengas un buen viaje en " + trip.getCiudad() + "!";
                 Snackbar.make(root, message, Snackbar.LENGTH_LONG).show();
             });
+
+            btnMap.setOnClickListener(v -> {
+                Intent mapIntent = new Intent(DetailActivity.this, MapActivity.class);
+                mapIntent.putExtra("trip", trip);
+                startActivity(mapIntent);
+            });
         }
 
         getOnBackPressedDispatcher().addCallback(this, new OnBackPressedCallback(true) {
             @Override
             public void handleOnBackPressed() {
-                Intent resultIntent = new Intent();
-                resultIntent.putExtra("trip", trip);
-                setResult(RESULT_OK, resultIntent);
                 finish();
             }
         });

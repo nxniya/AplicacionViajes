@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1093528730456",
+    "project_id": "appviajes-ec7f8",
+    "storage_bucket": "appviajes-ec7f8.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1093528730456:android:a19cc74213097e618c032d",
+        "android_client_info": {
+          "package_name": "com.example.aplicacionviajes"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1093528730456-r2ressk0kghkpp1hu564lv0qlado1ags.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB9AwUXKQL5sl-NunLae9YeV1b-S6Jrbnc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1093528730456-r2ressk0kghkpp1hu564lv0qlado1ags.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

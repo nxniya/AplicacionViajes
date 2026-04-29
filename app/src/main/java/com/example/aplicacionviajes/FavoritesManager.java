@@ -25,9 +25,15 @@ public class FavoritesManager {
         prefs.edit().putStringSet(KEY_FAVORITES, favorites).apply();
     }
 
+    public static void clearAllFavorites(Context context) {
+        context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
+                .edit().remove(KEY_FAVORITES).apply();
+    }
+
     public static void applyFavorites(Context context, List<Trip> trips) {
         SharedPreferences prefs = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
-        Set<String> favCodes = prefs.getStringSet(KEY_FAVORITES, new HashSet<>());
+        // Must copy — Android forbids mutating or relying on the live Set reference from getStringSet
+        Set<String> favCodes = new HashSet<>(prefs.getStringSet(KEY_FAVORITES, new HashSet<>()));
         for (Trip trip : trips) {
             trip.setFavorite(favCodes.contains(trip.getCodigo()));
         }
